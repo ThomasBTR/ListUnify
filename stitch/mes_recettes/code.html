@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#fff7f6",
+                    "error": "#a73b21",
+                    "primary": "#51644f",
+                    "tertiary-fixed-dim": "#ef9e5d",
+                    "surface-tint": "#51644f",
+                    "primary-container": "#d3e8ce",
+                    "secondary-fixed-dim": "#e3d2b5",
+                    "inverse-surface": "#0e0e0d",
+                    "on-secondary-fixed-variant": "#665a43",
+                    "tertiary": "#8f4f14",
+                    "error-container": "#fd795a",
+                    "on-tertiary-container": "#5d2e00",
+                    "on-secondary-fixed": "#493e29",
+                    "surface-container": "#efeee9",
+                    "primary-dim": "#465843",
+                    "outline-variant": "#b2b2ad",
+                    "on-tertiary": "#fff7f4",
+                    "on-secondary": "#fff8f1",
+                    "on-tertiary-fixed-variant": "#6a3500",
+                    "on-tertiary-fixed": "#3e1d00",
+                    "surface": "#fbf9f5",
+                    "surface-container-highest": "#e3e3dc",
+                    "surface-bright": "#fbf9f5",
+                    "tertiary-dim": "#804307",
+                    "on-error-container": "#6e1400",
+                    "surface-variant": "#e3e3dc",
+                    "secondary": "#6a5e46",
+                    "on-surface-variant": "#5e605b",
+                    "on-primary-fixed-variant": "#4e604b",
+                    "surface-container-high": "#e9e8e3",
+                    "on-primary": "#eaffe4",
+                    "surface-dim": "#dadad4",
+                    "on-surface": "#31332f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#445642",
+                    "tertiary-fixed": "#ffab69",
+                    "on-background": "#31332f",
+                    "inverse-primary": "#e7fde1",
+                    "outline": "#7a7b76",
+                    "primary-fixed-dim": "#c5dac0",
+                    "secondary-container": "#f2e0c3",
+                    "inverse-on-surface": "#9e9d99",
+                    "tertiary-container": "#ffab69",
+                    "secondary-fixed": "#f2e0c3",
+                    "primary-fixed": "#d3e8ce",
+                    "on-primary-fixed": "#324431",
+                    "error-dim": "#791903",
+                    "background": "#fbf9f5",
+                    "secondary-dim": "#5d523b",
+                    "surface-container-low": "#f5f4ef",
+                    "on-secondary-container": "#5c503a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container">
+<!-- Top Navigation Anchor (From JSON) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#fbf9f5]/80 dark:bg-stone-900/80 backdrop-blur-xl no-line tonal-layering bg-stone-100/50 dark:bg-stone-800/50">
+<button class="material-symbols-outlined text-[#51644f] dark:text-[#d3e8ce] p-2 hover:bg-stone-200/40 transition-colors rounded-full scale-95 duration-200 ease-out">arrow_back</button>
+<h1 class="font-plus-jakarta-sans text-2xl font-bold tracking-tight text-[#51644f] dark:text-[#d3e8ce]">Mes Recettes</h1>
+<button class="material-symbols-outlined text-[#51644f] dark:text-[#d3e8ce] p-2 hover:bg-stone-200/40 transition-colors rounded-full scale-95 duration-200 ease-out">add</button>
+</header>
+<main class="pt-24 pb-32 px-6 space-y-8 max-w-2xl mx-auto">
+<!-- Search Section -->
+<section class="space-y-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</div>
+<input class="w-full h-14 pl-14 pr-6 bg-surface-container-highest rounded-xl border-none focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-on-surface-variant font-medium" placeholder="Chercher une recette sur Jow..." type="text"/>
+</div>
+<!-- Pill Filters -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar py-2">
+<button class="px-6 py-2.5 bg-primary text-on-primary rounded-full font-medium whitespace-nowrap shadow-sm scale-95 active:scale-100 transition-transform">Cette semaine</button>
+<button class="px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full font-medium whitespace-nowrap hover:bg-surface-container-highest transition-colors">Favoris</button>
+<button class="px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full font-medium whitespace-nowrap hover:bg-surface-container-highest transition-colors">Toutes</button>
+</div>
+</section>
+<!-- Recipes List -->
+<section class="space-y-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-all active:scale-[0.98]">
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-lg text-on-surface">Poulet rôti aux légumes</h3>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">4 portions</span>
+<span class="text-xs text-on-surface-variant font-medium">6 ingrédients</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-bold uppercase tracking-wider">Sans gluten</span>
+<span class="px-3 py-1 bg-tertiary-container/20 text-tertiary rounded-full text-[10px] font-bold uppercase tracking-wider">Jow</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-all active:scale-[0.98]">
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">dinner_dining</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-lg text-on-surface">Pâtes carbonara</h3>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">4 portions</span>
+<span class="text-xs text-on-surface-variant font-medium">5 ingrédients</span>
+<span class="px-3 py-1 bg-error-container/10 text-error rounded-full text-[10px] font-bold uppercase tracking-wider">Contient: lactose</span>
+<span class="px-3 py-1 bg-tertiary-container/20 text-tertiary rounded-full text-[10px] font-bold uppercase tracking-wider">Jow</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-all active:scale-[0.98]">
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl">skillet</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-lg text-on-surface">Salade César</h3>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">4 portions</span>
+<span class="text-xs text-on-surface-variant font-medium">8 ingrédients</span>
+<span class="px-3 py-1 bg-outline-variant/30 text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-wider">Manuel</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<!-- Add Recipe Card -->
+<div class="mt-8 border-2 border-dashed border-outline-variant/50 rounded-lg p-8 flex flex-col items-center justify-center space-y-6">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-outline mb-2">add_circle</span>
+<p class="font-headline font-bold text-lg text-on-surface-variant">+ Ajouter une recette</p>
+</div>
+<div class="flex gap-3 w-full">
+<button class="flex-1 py-3 bg-tertiary-container/10 text-tertiary font-bold rounded-xl hover:bg-tertiary-container/20 transition-colors">Depuis Jow</button>
+<button class="flex-1 py-3 bg-surface-container-highest text-on-surface-variant font-bold rounded-xl hover:bg-surface-container-high transition-colors">Manuellement</button>
+</div>
+</div>
+</section>
+<!-- Asymmetric Detail Graphic -->
+<div class="py-10 opacity-30 flex justify-center">
+<div class="w-32 h-1 bg-primary/20 rounded-full"></div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (From JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#fbf9f5]/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width bottom-0 rounded-t-[3rem] shadow-[0_-12px_32px_rgba(81,100,79,0.06)] no-line tonal-layering">
+<!-- Accueil -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-[#51644f] transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[11px] font-medium tracking-wide uppercase mt-1">Accueil</span>
+</a>
+<!-- Recettes (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-[#d3e8ce] dark:bg-[#51644f] text-[#31332f] dark:text-[#fbf9f5] rounded-full px-5 py-2 transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-inter text-[11px] font-bold tracking-wide uppercase mt-1">Recettes</span>
+</a>
+<!-- Essentiels -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-[#51644f] transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined">shopping_basket</span>
+<span class="font-inter text-[11px] font-medium tracking-wide uppercase mt-1">Essentiels</span>
+</a>
+<!-- Famille -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-[#51644f] transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-inter text-[11px] font-medium tracking-wide uppercase mt-1">Famille</span>
+</a>
+</nav>
+</body></html>

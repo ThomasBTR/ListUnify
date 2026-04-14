@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ListUnify - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus_Jakarta_Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, .headline-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ef9e5d",
+                    "on-primary-fixed": "#324431",
+                    "on-secondary": "#fff8f1",
+                    "tertiary-fixed": "#ffab69",
+                    "on-secondary-fixed-variant": "#665a43",
+                    "surface-container-highest": "#e3e3dc",
+                    "surface-container-low": "#f5f4ef",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dadad4",
+                    "tertiary": "#8f4f14",
+                    "on-background": "#31332f",
+                    "primary-fixed-dim": "#c5dac0",
+                    "error-container": "#fd795a",
+                    "primary-dim": "#465843",
+                    "secondary": "#6a5e46",
+                    "inverse-primary": "#e7fde1",
+                    "inverse-on-surface": "#9e9d99",
+                    "surface-bright": "#fbf9f5",
+                    "tertiary-dim": "#804307",
+                    "primary-fixed": "#d3e8ce",
+                    "on-secondary-container": "#5c503a",
+                    "tertiary-container": "#ffab69",
+                    "background": "#fbf9f5",
+                    "surface": "#fbf9f5",
+                    "on-secondary-fixed": "#493e29",
+                    "on-tertiary-fixed": "#3e1d00",
+                    "surface-container": "#efeee9",
+                    "on-error-container": "#6e1400",
+                    "outline": "#7a7b76",
+                    "surface-tint": "#51644f",
+                    "on-tertiary-fixed-variant": "#6a3500",
+                    "on-surface-variant": "#5e605b",
+                    "secondary-dim": "#5d523b",
+                    "on-tertiary-container": "#5d2e00",
+                    "surface-variant": "#e3e3dc",
+                    "error": "#a73b21",
+                    "secondary-fixed": "#f2e0c3",
+                    "on-primary": "#eaffe4",
+                    "on-error": "#fff7f6",
+                    "primary-container": "#d3e8ce",
+                    "on-surface": "#31332f",
+                    "primary": "#51644f",
+                    "outline-variant": "#b2b2ad",
+                    "secondary-container": "#f2e0c3",
+                    "inverse-surface": "#0e0e0d",
+                    "on-primary-container": "#445642",
+                    "secondary-fixed-dim": "#e3d2b5",
+                    "error-dim": "#791903",
+                    "surface-container-high": "#e9e8e3",
+                    "on-tertiary": "#fff7f4",
+                    "on-primary-fixed-variant": "#4e604b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Inter"
+                    ],
+                    "label": [
+                            "Inter"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 dark:bg-stone-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#51644f] dark:text-[#8da189]">menu</span>
+<span class="font-['Plus_Jakarta_Sans'] font-extrabold text-2xl tracking-tight text-[#51644f] dark:text-[#8da189]">ListUnify</span>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-fixed flex items-center justify-center">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling woman with a warm expression in soft natural indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYmfHSzBJGNm55YIp10mJ95kC-_MtLNWXbiTFQZ1D5uegWV61I8_wcWnh5DT09IsmncFH67_Z3GAo98xf9B09ougUW5qdO5TJh6CUsC6wSYpT4-FwARuUOv9y485_ZWlNjciE6J_MYGiIVRnDan5V2rYLpRO44ZvgM90vmbmkCmpmrf0_nOUZTFpLc1wKtEP6-ZjjiPKE4IC_s87dw-fA-5ubwzz1YVzRrn6kGJ2DPHST6u5cUiqCHhWeTt048zi3EF9v6ii0Lao"/>
+</div>
+</header>
+<main class="mt-24 px-6 max-w-5xl mx-auto">
+<!-- Hero Greeting Section -->
+<section class="mb-10 mt-12 ml-2">
+<h1 class="text-4xl md:text-5xl font-extrabold headline-font text-on-background tracking-tight mb-2">
+                Bonjour Marie
+            </h1>
+<p class="text-on-surface-variant font-medium text-lg">
+                Semaine du 7 au 13 avril — 23 articles
+            </p>
+</section>
+<!-- Bento Grid for Categories -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+<!-- Left Card: Recettes -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-lg p-8 transition-all duration-300 hover:translate-y-[-4px]">
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-gradient-to-br from-primary to-secondary-fixed"></div>
+<!-- Abstract Food Decoration -->
+<div class="absolute -right-4 -bottom-4 w-32 h-32 opacity-20 pointer-events-none rounded-full bg-primary-container blur-3xl"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="w-14 h-14 bg-primary-container text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<h3 class="headline-font text-2xl font-bold mb-3">Recettes</h3>
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container/50 text-on-secondary-container text-sm font-semibold">
+                            3 recettes · 18 ingrédients
+                        </div>
+</div>
+</div>
+</div>
+<!-- Right Card: Essentiels Maison -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-lg p-8 transition-all duration-300 hover:translate-y-[-4px]">
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-gradient-to-br from-tertiary to-primary-container"></div>
+<!-- Abstract House Decoration -->
+<div class="absolute -right-4 -bottom-4 w-32 h-32 opacity-20 pointer-events-none rounded-full bg-tertiary-container blur-3xl"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="w-14 h-14 bg-tertiary-container/30 text-tertiary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="cleaning_services">cleaning_services</span>
+</div>
+<h3 class="headline-font text-2xl font-bold mb-3">Essentiels Maison</h3>
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-tertiary-container/20 text-tertiary text-sm font-semibold">
+                            5 articles
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Section -->
+<section class="space-y-4 max-w-2xl mx-auto md:mx-0">
+<!-- Primary CTA -->
+<button class="w-full flex items-center justify-center gap-3 bg-primary text-on-primary py-5 rounded-full font-bold text-lg shadow-[0_12px_32px_rgba(81,100,79,0.12)] transition-transform active:scale-95 group">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform" data-icon="checklist">checklist</span>
+                Voir ma liste complète (23)
+            </button>
+<!-- Secondary CTA -->
+<button class="w-full flex items-center justify-center gap-3 bg-transparent text-primary py-4 rounded-full font-bold border-2 border-primary/10 hover:border-primary/30 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="playlist_add_check">playlist_add_check</span>
+                Exporter vers Rappels
+            </button>
+</section>
+<!-- Small Informative Fragment (Editorial Style) -->
+<section class="mt-16 mb-24 opacity-60 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 px-4">
+<div class="max-w-sm">
+<p class="text-sm font-medium leading-relaxed italic">
+                    "Une cuisine organisée est le secret d'une maison sereine."
+                </p>
+<p class="text-xs mt-1 uppercase tracking-widest font-bold">L'Atelier ListUnify</p>
+</div>
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Family 1" class="inline-block h-8 w-8 rounded-full ring-2 ring-background" data-alt="Portrait of a smiling young man with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVoFTlwO0gX0-vZrvL4oRARtWf8ks9RHiPrtrOjzjsbmnx-XNBFYlURdEZmR7QwNPEhu7Ee2kZZq4q5NL8dQmQr3QvYN1Vh-_qzYR4DpEuiS0JzTVNZGJYd3RQg9Ou59RE8JvxsG-OmRkNrHOql_R8htwHAOrxg3an9UvsAIuo5iBETfE-lvdvJPb_7vaC2ILUadROa8X1kB1sZF5N5bdwAWDOyLYWUE8J69kOErx88chnT9GCbRNePBC1kyG-x1xo-ksvQQSkcLw"/>
+<img alt="Family 2" class="inline-block h-8 w-8 rounded-full ring-2 ring-background" data-alt="Portrait of a person with a friendly expression in a bright setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZOh4vTNBMcBIn2Lk_pijWheELWXKKZXh5qTO-KiD52863bxYGflySiaruC-zPaKkL4CceFN7_7dBSB6ShOlpvhHK53__YZDOi_MZP6NP8Rw4KBlSW268ICbZ1oIsqJd1eVAZvfJTWfvxd7HnPg2VtnhgFxvOFNnjg6hs8vL9ejjF4_AYtIMA-uynsckOkMenUoftaC_gdSiA9b95ZHbRLJi8IQDvS-RRZsanuMAujzgwaSF7onzuc1olqzF1MKMjvdl6RxC8nIE"/>
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-container text-[10px] font-bold text-primary ring-2 ring-background">+3</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#fbf9f5]/80 dark:bg-stone-900/80 backdrop-blur-md rounded-t-[3rem] z-50 shadow-[0_-12px_32px_rgba(81,100,79,0.06)]">
+<!-- Accueil - Active -->
+<div class="flex flex-col items-center justify-center bg-[#d3e8ce] dark:bg-[#51644f] text-[#51644f] dark:text-[#d3e8ce] rounded-full px-5 py-2 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] font-medium text-[11px] mt-1">Accueil</span>
+</div>
+<!-- Recettes -->
+<div class="flex flex-col items-center justify-center text-[#31332f]/50 dark:text-stone-400 px-5 py-2 hover:bg-[#d3e8ce]/40 dark:hover:bg-[#51644f]/40 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Inter'] font-medium text-[11px] mt-1">Recettes</span>
+</div>
+<!-- Essentiels -->
+<div class="flex flex-col items-center justify-center text-[#31332f]/50 dark:text-stone-400 px-5 py-2 hover:bg-[#d3e8ce]/40 dark:hover:bg-[#51644f]/40 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+<span class="font-['Inter'] font-medium text-[11px] mt-1">Essentiels</span>
+</div>
+<!-- Famille -->
+<div class="flex flex-col items-center justify-center text-[#31332f]/50 dark:text-stone-400 px-5 py-2 hover:bg-[#d3e8ce]/40 dark:hover:bg-[#51644f]/40 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Inter'] font-medium text-[11px] mt-1">Famille</span>
+</div>
+</nav>
+</body></html>

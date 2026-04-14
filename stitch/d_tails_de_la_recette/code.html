@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e3e3dc",
+                    "on-secondary": "#fff8f1",
+                    "outline-variant": "#b2b2ad",
+                    "tertiary-dim": "#804307",
+                    "tertiary": "#8f4f14",
+                    "primary-fixed": "#d3e8ce",
+                    "primary-dim": "#465843",
+                    "surface-container": "#efeee9",
+                    "surface-dim": "#dadad4",
+                    "surface-container-low": "#f5f4ef",
+                    "secondary-fixed-dim": "#e3d2b5",
+                    "on-error-container": "#6e1400",
+                    "secondary-dim": "#5d523b",
+                    "error-dim": "#791903",
+                    "error-container": "#fd795a",
+                    "surface-variant": "#e3e3dc",
+                    "on-tertiary": "#fff7f4",
+                    "on-secondary-fixed": "#493e29",
+                    "inverse-primary": "#e7fde1",
+                    "on-background": "#31332f",
+                    "secondary": "#6a5e46",
+                    "on-surface-variant": "#5e605b",
+                    "on-primary": "#eaffe4",
+                    "surface-container-high": "#e9e8e3",
+                    "surface-tint": "#51644f",
+                    "inverse-on-surface": "#9e9d99",
+                    "tertiary-fixed-dim": "#ef9e5d",
+                    "on-primary-container": "#445642",
+                    "inverse-surface": "#0e0e0d",
+                    "error": "#a73b21",
+                    "background": "#fbf9f5",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#51644f",
+                    "surface-bright": "#fbf9f5",
+                    "surface": "#fbf9f5",
+                    "on-error": "#fff7f6",
+                    "on-secondary-fixed-variant": "#665a43",
+                    "on-secondary-container": "#5c503a",
+                    "primary-container": "#d3e8ce",
+                    "outline": "#7a7b76",
+                    "tertiary-container": "#ffab69",
+                    "secondary-fixed": "#f2e0c3",
+                    "primary-fixed-dim": "#c5dac0",
+                    "tertiary-fixed": "#ffab69",
+                    "on-primary-fixed": "#324431",
+                    "on-tertiary-container": "#5d2e00",
+                    "secondary-container": "#f2e0c3",
+                    "on-tertiary-fixed-variant": "#6a3500",
+                    "on-tertiary-fixed": "#3e1d00",
+                    "on-surface": "#31332f",
+                    "on-primary-fixed-variant": "#4e604b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(81,100,79,0.06)] flex items-center justify-between px-6 h-16">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-[#d3e8ce]/20 transition-colors active:scale-95 duration-200 text-[#51644f] dark:text-[#8DA189]">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-xl text-[#31332f] dark:text-stone-100 truncate px-4">Poulet rôti aux légumes</h1>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-[#d3e8ce]/20 transition-colors active:scale-95 duration-200 text-[#51644f] dark:text-[#8DA189]">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</header>
+<main class="mt-20 px-6 max-w-2xl mx-auto">
+<!-- Hero Image (Bento style editorial feel) -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-8 shadow-sm">
+<img alt="Poulet rôti" class="w-full h-full object-cover" data-alt="Golden brown roasted whole chicken surrounded by caramelized carrots and potatoes in a rustic ceramic dish, warm kitchen lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9u_9i-ZhcNfy2uYsx8wGBK6KlobiHQTC4lDFaFGAClbunGC3Bpls5kPfWW4qUkI-yq1U2uQtt-NVD93OD7VhziYfgIOgHCKapqj0AVKGe4nfHW015vbZR20eNbwjBqCD_2ZyowgdIiraL8_MKmZg47e3K4qiekl8k9JtpI2Tf-P2AAEH5VdOHm0BnzlpKy43FrjZKp7dRI_UvsERuqAKPGE3-j1w7D1hzGeYziqvwqeZposJTPLnEi5neJ7F309UhO64a50OLs2k"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-[#FF9800] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                    Importé depuis Jow
+                </span>
+</div>
+</div>
+<!-- Badges & Status -->
+<div class="flex flex-wrap items-center gap-3 mb-8">
+<div class="bg-primary-container/40 text-primary px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Compatible avec vos profils
+            </div>
+</div>
+<!-- Portion Adjuster Section -->
+<section class="bg-surface-container-low rounded-lg p-6 mb-10">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline font-bold text-lg text-on-surface">Portions:</span>
+<div class="flex items-center gap-5">
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-primary hover:bg-primary-container transition-colors active:scale-90">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline font-extrabold text-xl shadow-lg">
+                        4
+                    </div>
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-primary hover:bg-primary-container transition-colors active:scale-90">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant/80 font-medium">
+                Basé sur votre famille (2 adultes, 2 enfants)
+            </p>
+</section>
+<!-- Ingredients Section -->
+<section class="mb-12">
+<div class="flex items-end justify-between mb-6">
+<h2 class="text-2xl font-extrabold font-headline tracking-tight text-on-surface">Ingrédients (6)</h2>
+<button class="text-primary text-sm font-semibold hover:underline">Tout désélectionner</button>
+</div>
+<div class="space-y-3">
+<!-- Ingredient Row 1 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input checked="" class="w-6 h-6 rounded-md border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="font-medium text-on-surface">Poulet entier</span>
+</div>
+<span class="text-on-surface-variant font-semibold">1,2 kg</span>
+</div>
+<!-- Ingredient Row 2 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input checked="" class="w-6 h-6 rounded-md border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="font-medium text-on-surface">Pommes de terre</span>
+</div>
+<span class="text-on-surface-variant font-semibold">500 g</span>
+</div>
+<!-- Ingredient Row 3 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input checked="" class="w-6 h-6 rounded-md border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="font-medium text-on-surface">Carottes</span>
+</div>
+<span class="text-on-surface-variant font-semibold">300 g</span>
+</div>
+<!-- Ingredient Row 4 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:shadow-md transition-shadow border-2 border-primary-container/30">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input checked="" class="w-6 h-6 rounded-md border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="font-medium text-on-surface">Oignons</span>
+</div>
+<span class="text-on-surface-variant font-semibold">2 pièces</span>
+</div>
+<!-- Ingredient Row 5 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input checked="" class="w-6 h-6 rounded-md border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="font-medium text-on-surface">Huile d'olive</span>
+</div>
+<span class="text-on-surface-variant font-semibold">2 c.à.s</span>
+</div>
+<!-- Ingredient Row 6 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input checked="" class="w-6 h-6 rounded-md border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="font-medium text-on-surface">Herbes de Provence</span>
+</div>
+<span class="text-on-surface-variant font-semibold">1 c.à.c</span>
+</div>
+</div>
+<!-- Aggregation Note -->
+<div class="mt-6 p-4 rounded-lg bg-primary-container/10 flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                    Les oignons seront agrégés avec les autres recettes qui en contiennent.
+                </p>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Action -->
+<div class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background via-background to-transparent z-40">
+<div class="max-w-2xl mx-auto">
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-headline font-bold text-lg shadow-[0_12px_32px_rgba(81,100,79,0.25)] flex items-center justify-center gap-3 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                Ajouter à ma liste
+            </button>
+</div>
+</div>
+<!-- Bottom Navigation Bar (Hidden on this transactional detail page as per rules, but included if it were a top-level screen) -->
+<!-- Suppression logic applied: This is a task-focused sub-page with a "Back" action. Navigation is hidden. -->
+</body></html>

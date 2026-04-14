@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-dim": "#5d523b",
+                        "error-dim": "#791903",
+                        "error-container": "#fd795a",
+                        "inverse-primary": "#e7fde1",
+                        "on-secondary-fixed": "#493e29",
+                        "surface-variant": "#e3e3dc",
+                        "on-tertiary": "#fff7f4",
+                        "tertiary-dim": "#804307",
+                        "tertiary": "#8f4f14",
+                        "primary-fixed": "#d3e8ce",
+                        "outline-variant": "#b2b2ad",
+                        "surface-container-highest": "#e3e3dc",
+                        "on-secondary": "#fff8f1",
+                        "surface-container-low": "#f5f4ef",
+                        "secondary-fixed-dim": "#e3d2b5",
+                        "on-error-container": "#6e1400",
+                        "surface-dim": "#dadad4",
+                        "surface-container": "#efeee9",
+                        "primary-dim": "#465843",
+                        "on-secondary-fixed-variant": "#665a43",
+                        "on-secondary-container": "#5c503a",
+                        "surface": "#fbf9f5",
+                        "on-error": "#fff7f6",
+                        "surface-bright": "#fbf9f5",
+                        "primary": "#51644f",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fbf9f5",
+                        "on-surface": "#31332f",
+                        "on-primary-fixed-variant": "#4e604b",
+                        "secondary-container": "#f2e0c3",
+                        "on-tertiary-fixed-variant": "#6a3500",
+                        "on-tertiary-fixed": "#3e1d00",
+                        "on-primary-fixed": "#324431",
+                        "on-tertiary-container": "#5d2e00",
+                        "tertiary-container": "#ffab69",
+                        "secondary-fixed": "#f2e0c3",
+                        "primary-fixed-dim": "#c5dac0",
+                        "tertiary-fixed": "#ffab69",
+                        "primary-container": "#d3e8ce",
+                        "outline": "#7a7b76",
+                        "surface-container-high": "#e9e8e3",
+                        "on-surface-variant": "#5e605b",
+                        "on-primary": "#eaffe4",
+                        "secondary": "#6a5e46",
+                        "on-background": "#31332f",
+                        "error": "#a73b21",
+                        "inverse-surface": "#0e0e0d",
+                        "on-primary-container": "#445642",
+                        "tertiary-fixed-dim": "#ef9e5d",
+                        "surface-tint": "#51644f",
+                        "inverse-on-surface": "#9e9d99"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(81,100,79,0.06)] flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#51644f]" data-icon="menu">menu</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold text-[#51644f] text-2xl tracking-tight">Ma Famille</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-stone-100/50 hover:bg-stone-100 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#51644f]" data-icon="add">add</span>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Profile Selection Row -->
+<section class="mb-10 overflow-x-auto hide-scrollbar -mx-6 px-6">
+<div class="flex gap-6 min-w-max py-2">
+<!-- Marie (Active) -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative">
+<div class="w-20 h-20 rounded-full p-1 border-2 border-primary">
+<img class="w-full h-full object-cover rounded-full" data-alt="portrait of a smiling woman with warm lighting and soft natural background in a high-end lifestyle photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBTIFAdEqfJBhNCkuHDBTIHAmWV5-ks-w6Q7EWdMJ8wj76BBNJwdD9lVR70YMiCCdR82sW9kKwReaoeF80afLzx1MR6RAzdW8nkLOLcYccTxhHsmjLFQ7YhKzaWUefCF0BHW5FlCdIk1-gr4zuD36GByvITx5VEpty_EzPvekHHxtw-otjW6Ce46x-a9MSKuHrABArFWlzCeRWZZ45P-8eadNX4tAlUweaYxSFyHIwiCWLKbhQkZ4iktxWm-e82IhlJAmSgMsLFBk"/>
+</div>
+<div class="absolute -top-1 -right-1 bg-[#FFD700] rounded-full p-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-fixed flex items-center justify-center" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<span class="font-headline font-bold text-sm text-primary">Marie</span>
+</div>
+<!-- Thomas -->
+<div class="flex flex-col items-center gap-3 opacity-60">
+<div class="w-20 h-20 rounded-full p-1">
+<img class="w-full h-full object-cover rounded-full" data-alt="professional portrait of a young man with a friendly expression against a neutral warm background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOYDow8cb0HG_XXdyTsdSjLAAsLum7lfPlolrmEDITXvPu1yQjoS7JydQxcbtXpVbnf-BXM3-Z8ptRDXVpr-VvZAhNeO7B1AGbe4XVWqGN3tr5Ggcb5Xbj2WgHgcEypMsH-vVHgEnnYwmm9dUbbEpqTsjnM71f47w9ijhj56wRC3SfVILEezngnUC5fWekRxOLljI_85e_JuEvoDi0cd0vq-OZsGTY5Ql0VaPaTK4jqUpMJLs_bl8G3JladVu0R0oZys4G9VchrZA"/>
+</div>
+<span class="font-headline font-medium text-sm">Thomas</span>
+</div>
+<!-- Léa -->
+<div class="flex flex-col items-center gap-3 opacity-60">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="child_care">child_care</span>
+</div>
+<span class="font-headline font-medium text-sm">Léa</span>
+</div>
+<!-- Hugo -->
+<div class="flex flex-col items-center gap-3 opacity-60">
+<div class="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed text-3xl" data-icon="baby_changing_station">baby_changing_station</span>
+</div>
+<span class="font-headline font-medium text-sm">Hugo</span>
+</div>
+<!-- Milo -->
+<div class="flex flex-col items-center gap-3 opacity-60">
+<div class="w-20 h-20 rounded-full bg-stone-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-600 text-3xl" data-icon="pets">pets</span>
+</div>
+<span class="font-headline font-medium text-sm">Milo</span>
+</div>
+</div>
+</section>
+<!-- Profile Detail Card -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(81,100,79,0.06)] mb-10">
+<div class="flex justify-between items-start mb-8">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tight">Marie</h2>
+<span class="material-symbols-outlined text-outline-variant hover:text-primary cursor-pointer transition-colors" data-icon="edit">edit</span>
+</div>
+<span class="px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-container font-label text-xs font-semibold uppercase tracking-wider">Adulte</span>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Allergènes -->
+<div>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline font-bold text-on-surface-variant">Allergènes</h3>
+<button class="text-primary font-semibold text-sm flex items-center gap-1 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                            Ajouter
+                        </button>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-error-container/10 text-error font-medium rounded-full text-sm">Arachides</span>
+<span class="px-4 py-2 bg-error-container/10 text-error font-medium rounded-full text-sm">Fruits à coque</span>
+</div>
+</div>
+<!-- Préférences -->
+<div>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline font-bold text-on-surface-variant">Préférences alimentaires</h3>
+<button class="text-primary font-semibold text-sm flex items-center gap-1 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                            Ajouter
+                        </button>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-secondary-container/30 text-secondary-dim font-medium rounded-full text-sm">Sans porc</span>
+</div>
+</div>
+</div>
+<!-- Info Box -->
+<div class="mt-10 p-4 bg-surface-container rounded-lg flex gap-4 items-start border-l-4 border-primary/20">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="info">info</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    Les recettes contenant ces allergènes seront signalées dans votre liste.
+                </p>
+</div>
+</section>
+<!-- Portions Settings -->
+<section class="bg-surface-container-low rounded-xl p-8">
+<div class="flex items-start justify-between mb-2">
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-1">Portions par défaut</h3>
+<p class="text-sm text-on-surface-variant font-medium">Calcul automatique basé sur votre famille</p>
+</div>
+<div class="w-14 h-8 bg-primary rounded-full relative flex items-center px-1 transition-all">
+<div class="w-6 h-6 bg-white rounded-full absolute right-1 shadow-sm transition-all"></div>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/10 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="group">group</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">2 adultes + 2 enfants</p>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">= 4 portions</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#fbf9f5]/80 backdrop-blur-xl rounded-t-[3rem] z-50 shadow-[0_-8px_24px_rgba(81,100,79,0.04)]">
+<div class="flex flex-col items-center justify-center text-stone-500 px-5 py-2 hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Accueil</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 px-5 py-2 hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="rebase_edit">rebase_edit</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Recettes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 px-5 py-2 hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Essentiels</span>
+</div>
+<!-- Active Tab: Famille -->
+<div class="flex flex-col items-center justify-center bg-[#d3e8ce] text-[#31332f] rounded-full px-5 py-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="family_restroom" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider">Famille</span>
+</div>
+</nav>
+</body></html>

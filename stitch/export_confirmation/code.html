@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-low": "#f5f4ef",
+                "secondary-fixed-dim": "#e3d2b5",
+                "on-error-container": "#6e1400",
+                "surface-dim": "#dadad4",
+                "surface-container": "#efeee9",
+                "primary-dim": "#465843",
+                "tertiary-dim": "#804307",
+                "tertiary": "#8f4f14",
+                "primary-fixed": "#d3e8ce",
+                "outline-variant": "#b2b2ad",
+                "surface-container-highest": "#e3e3dc",
+                "on-secondary": "#fff8f1",
+                "inverse-primary": "#e7fde1",
+                "on-secondary-fixed": "#493e29",
+                "surface-variant": "#e3e3dc",
+                "on-tertiary": "#fff7f4",
+                "secondary-dim": "#5d523b",
+                "error-dim": "#791903",
+                "error-container": "#fd795a",
+                "error": "#a73b21",
+                "inverse-surface": "#0e0e0d",
+                "on-primary-container": "#445642",
+                "tertiary-fixed-dim": "#ef9e5d",
+                "surface-tint": "#51644f",
+                "inverse-on-surface": "#9e9d99",
+                "surface-container-high": "#e9e8e3",
+                "on-surface-variant": "#5e605b",
+                "on-primary": "#eaffe4",
+                "secondary": "#6a5e46",
+                "on-background": "#31332f",
+                "on-primary-fixed-variant": "#4e604b",
+                "on-surface": "#31332f",
+                "secondary-container": "#f2e0c3",
+                "on-tertiary-fixed-variant": "#6a3500",
+                "on-tertiary-fixed": "#3e1d00",
+                "on-tertiary-container": "#5d2e00",
+                "on-primary-fixed": "#324431",
+                "tertiary-fixed": "#ffab69",
+                "tertiary-container": "#ffab69",
+                "secondary-fixed": "#f2e0c3",
+                "primary-fixed-dim": "#c5dac0",
+                "outline": "#7a7b76",
+                "primary-container": "#d3e8ce",
+                "on-secondary-fixed-variant": "#665a43",
+                "on-secondary-container": "#5c503a",
+                "surface": "#fbf9f5",
+                "on-error": "#fff7f6",
+                "surface-bright": "#fbf9f5",
+                "primary": "#51644f",
+                "surface-container-lowest": "#ffffff",
+                "background": "#fbf9f5"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- Background Content (Dimmed) -->
+<div class="fixed inset-0 bg-surface-dim/40 backdrop-blur-sm z-0"></div>
+<!-- Main Navigation TopAppBar (Frozen Context) -->
+<header class="fixed top-0 w-full z-10 bg-[#fbf9f5]/80 dark:bg-stone-900/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-screen-xl mx-auto">
+<span class="material-symbols-outlined text-[#51644f] dark:text-[#8DA189]">menu</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#51644f] dark:text-[#8DA189]">Ma Liste</h1>
+<span class="material-symbols-outlined text-[#51644f] dark:text-[#8DA189]">account_circle</span>
+</div>
+</header>
+<!-- Simulated Content Layer -->
+<main class="pt-20 px-6 pb-32 space-y-8 opacity-50 select-none">
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<h2 class="text-3xl font-black tracking-tight text-primary">Courses Hebdo</h2>
+<span class="text-sm font-medium text-on-surface-variant">23 articles</span>
+</div>
+<!-- Category Group 1 -->
+<div class="p-6 bg-surface-container-low rounded-lg space-y-4">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">eco</span>
+<span class="uppercase tracking-widest text-[10px]">Fruits &amp; Légumes</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant"></div>
+<span class="body-md">Pommes Gala (x6)</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant"></div>
+<span class="body-md">Avocats mûrs (x2)</span>
+</div>
+</div>
+</div>
+<!-- Category Group 2 -->
+<div class="p-6 bg-surface-container-lowest rounded-lg space-y-4">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">bakery_dining</span>
+<span class="uppercase tracking-widest text-[10px]">Boulangerie</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-primary-container border-2 border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="body-md line-through text-on-surface-variant">Baguette Tradition</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Export Confirmation Bottom Sheet -->
+<div class="fixed inset-0 z-50 flex items-end justify-center bg-on-background/30">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-t-xl p-8 shadow-[0_-12px_32px_rgba(81,100,79,0.06)] animate-in slide-in-from-bottom duration-300">
+<!-- Drag Handle -->
+<div class="w-12 h-1.5 bg-surface-container-highest rounded-full mx-auto mb-8"></div>
+<!-- Header -->
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-[#f2f2f7] rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-[#ff3b30]" style="font-variation-settings: 'FILL' 1;">format_list_bulleted</span>
+</div>
+<div>
+<h3 class="text-xl font-bold tracking-tight text-on-surface">Exporter vers Rappels</h3>
+<p class="text-sm text-on-surface-variant font-medium">Apple Reminders</p>
+</div>
+</div>
+<!-- Options Form -->
+<div class="space-y-6">
+<!-- Radio Group -->
+<div class="space-y-4">
+<label class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent hover:border-primary-fixed transition-all group">
+<div class="mt-1 w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface">Remplacer la liste existante</p>
+<p class="text-xs text-on-surface-variant mt-0.5">La liste 'Courses' actuelle sera écrasée.</p>
+</div>
+<input checked="" class="hidden" name="export_type" type="radio"/>
+</label>
+<label class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-lowest border border-surface-container-highest cursor-pointer hover:bg-surface-container-low transition-all">
+<div class="mt-1 w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center"></div>
+<div class="flex-1">
+<p class="font-bold text-on-surface">Ajouter à la liste existante</p>
+</div>
+<input class="hidden" name="export_type" type="radio"/>
+</label>
+</div>
+<!-- Select Dropdown -->
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant ml-1">Destination</label>
+<div class="relative">
+<select class="w-full bg-surface-container-highest border-none rounded-full px-6 py-4 appearance-none font-semibold text-on-surface focus:ring-2 focus:ring-primary/20">
+<option>Courses</option>
+<option>Maison</option>
+<option>Travail</option>
+</select>
+<span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Toggle Section -->
+<div class="flex items-center justify-between p-4 bg-primary-container/30 rounded-lg">
+<div class="flex-1">
+<p class="font-bold text-on-surface">Partager avec Thomas</p>
+<p class="text-xs text-on-surface-variant mt-0.5">Envoie une invitation de collaboration.</p>
+</div>
+<div class="w-12 h-7 bg-primary rounded-full relative flex items-center px-1">
+<div class="w-5 h-5 bg-on-primary rounded-full shadow-sm ml-auto"></div>
+</div>
+</div>
+<!-- Summary -->
+<div class="flex items-center justify-center gap-2 py-4 border-y border-surface-container-highest">
+<span class="material-symbols-outlined text-primary text-lg">inventory_2</span>
+<p class="text-sm font-semibold text-primary">23 articles dans 5 catégories</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 pt-2">
+<button class="w-full bg-primary text-on-primary font-bold py-5 rounded-full shadow-[0_4px_12px_rgba(81,100,79,0.2)] hover:opacity-90 active:scale-[0.98] transition-all">
+                        Exporter maintenant
+                    </button>
+<button class="w-full bg-transparent text-on-surface-variant font-bold py-4 rounded-full hover:bg-surface-container-highest transition-all">
+                        Annuler
+                    </button>
+</div>
+</div>
+<!-- Safe area spacer for mobile -->
+<div class="h-6"></div>
+</div>
+</div>
+<!-- Bottom Navigation (Shared Component Style) -->
+<nav class="fixed bottom-0 left-0 w-full px-4 pb-6 pt-2 flex justify-around items-center bg-[#fbf9f5]/80 backdrop-blur-xl z-10 rounded-t-[3rem] shadow-[0_-12px_32px_rgba(81,100,79,0.06)] opacity-50 pointer-events-none">
+<div class="flex flex-col items-center justify-center text-[#31332f]/50 px-5 py-2">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Pantry</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#d3e8ce] text-[#51644f] rounded-full px-5 py-2">
+<span class="material-symbols-outlined">shopping_basket</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">List</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#31332f]/50 px-5 py-2">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Recipes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#31332f]/50 px-5 py-2">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Explore</span>
+</div>
+</nav>
+</body></html>

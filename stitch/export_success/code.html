@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f5f4ef",
+                    "secondary-fixed-dim": "#e3d2b5",
+                    "on-error-container": "#6e1400",
+                    "surface-dim": "#dadad4",
+                    "surface-container": "#efeee9",
+                    "primary-dim": "#465843",
+                    "tertiary-dim": "#804307",
+                    "tertiary": "#8f4f14",
+                    "primary-fixed": "#d3e8ce",
+                    "outline-variant": "#b2b2ad",
+                    "surface-container-highest": "#e3e3dc",
+                    "on-secondary": "#fff8f1",
+                    "inverse-primary": "#e7fde1",
+                    "on-secondary-fixed": "#493e29",
+                    "surface-variant": "#e3e3dc",
+                    "on-tertiary": "#fff7f4",
+                    "secondary-dim": "#5d523b",
+                    "error-dim": "#791903",
+                    "error-container": "#fd795a",
+                    "error": "#a73b21",
+                    "inverse-surface": "#0e0e0d",
+                    "on-primary-container": "#445642",
+                    "tertiary-fixed-dim": "#ef9e5d",
+                    "surface-tint": "#51644f",
+                    "inverse-on-surface": "#9e9d99",
+                    "surface-container-high": "#e9e8e3",
+                    "on-surface-variant": "#5e605b",
+                    "on-primary": "#eaffe4",
+                    "secondary": "#6a5e46",
+                    "on-background": "#31332f",
+                    "on-primary-fixed-variant": "#4e604b",
+                    "on-surface": "#31332f",
+                    "secondary-container": "#f2e0c3",
+                    "on-tertiary-fixed-variant": "#6a3500",
+                    "on-tertiary-fixed": "#3e1d00",
+                    "on-tertiary-container": "#5d2e00",
+                    "on-primary-fixed": "#324431",
+                    "tertiary-fixed": "#ffab69",
+                    "tertiary-container": "#ffab69",
+                    "secondary-fixed": "#f2e0c3",
+                    "primary-fixed-dim": "#c5dac0",
+                    "outline": "#7a7b76",
+                    "primary-container": "#d3e8ce",
+                    "on-secondary-fixed-variant": "#665a43",
+                    "on-secondary-container": "#5c503a",
+                    "surface": "#fbf9f5",
+                    "on-error": "#fff7f6",
+                    "surface-bright": "#fbf9f5",
+                    "primary": "#51644f",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf9f5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen relative overflow-hidden">
+<!-- Dimmed Background Content (The Shopping List) -->
+<div class="fixed inset-0 z-0 opacity-40 blur-[2px] pointer-events-none px-6 pt-20">
+<header class="mb-12">
+<h1 class="text-4xl font-extrabold tracking-tighter text-primary">Ma Liste Hebdo</h1>
+<p class="text-on-surface-variant font-medium mt-2">Dernière modification : Aujourd'hui</p>
+</header>
+<div class="grid grid-cols-1 gap-6">
+<!-- Mock List Items -->
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+<div>
+<p class="font-semibold text-lg">Avocats mûrs</p>
+<p class="text-sm text-on-surface-variant">Fruits &amp; Légumes</p>
+</div>
+</div>
+<span class="text-on-surface-variant font-medium">x3</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+<div>
+<p class="font-semibold text-lg">Pain au Levain</p>
+<p class="text-sm text-on-surface-variant">Boulangerie</p>
+</div>
+</div>
+<span class="text-on-surface-variant font-medium">x1</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+<div>
+<p class="font-semibold text-lg">Beurre Demi-Sel</p>
+<p class="text-sm text-on-surface-variant">Crémerie</p>
+</div>
+</div>
+<span class="text-on-surface-variant font-medium">x2</span>
+</div>
+</div>
+</div>
+<!-- Success State Modal / Transformation Layer -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-6 bg-on-background/20 backdrop-blur-sm">
+<!-- The Success Container -->
+<div class="w-full max-w-md bg-surface rounded-xl shadow-[0_12px_48px_rgba(81,100,79,0.12)] overflow-hidden flex flex-col items-center px-8 pt-12 pb-10 text-center relative">
+<!-- Success Icon Assembly -->
+<div class="mb-8 relative">
+<div class="w-24 h-24 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1; font-weight: 600;">
+                        check_circle
+                    </span>
+</div>
+<!-- Subtle radial light effect behind the icon -->
+<div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full -z-10"></div>
+</div>
+<!-- Content Area -->
+<div class="space-y-4 mb-12">
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight leading-tight">
+                    Liste exportée !
+                </h2>
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-primary text-lg">playlist_add_check</span>
+<p class="text-on-surface-variant font-medium text-sm">
+                        23 articles ajoutés à <span class="text-primary font-bold">Rappels &gt; Courses</span>
+</p>
+</div>
+</div>
+<!-- Actions -->
+<div class="w-full space-y-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-bold text-lg shadow-lg hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+                    Ouvrir Rappels
+                    <span class="material-symbols-outlined">open_in_new</span>
+</button>
+<button class="w-full py-4 text-on-surface-variant font-semibold text-base hover:text-on-surface transition-colors">
+                    Fermer
+                </button>
+</div>
+<!-- Editorial Accent -->
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-9xl">shopping_basket</span>
+</div>
+</div>
+</div>
+<!-- Top App Bar Mockup -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 w-full max-w-screen-xl mx-auto bg-surface/80 backdrop-blur-xl pointer-events-none opacity-50">
+<div class="text-2xl font-black text-primary tracking-tighter">L'Atelier</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+</header>
+<!-- Bottom Nav Bar Mockup (Suppressed for focused task, but present in background) -->
+<nav class="fixed bottom-0 left-0 w-full px-4 pb-6 pt-2 flex justify-around items-center bg-surface/80 backdrop-blur-xl rounded-t-xl z-10 opacity-30 pointer-events-none">
+<div class="flex flex-col items-center justify-center text-on-surface/50 px-5 py-2">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Pantry</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-primary rounded-full px-5 py-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_basket</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">List</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface/50 px-5 py-2">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Recipes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface/50 px-5 py-2">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Explore</span>
+</div>
+</nav>
+</body></html>

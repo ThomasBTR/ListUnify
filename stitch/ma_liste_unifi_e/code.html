@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#51644f",
+                    "secondary-container": "#f2e0c3",
+                    "primary-fixed": "#d3e8ce",
+                    "tertiary-fixed-dim": "#ef9e5d",
+                    "on-primary-container": "#445642",
+                    "tertiary": "#8f4f14",
+                    "surface": "#fbf9f5",
+                    "on-tertiary-fixed": "#3e1d00",
+                    "on-secondary-fixed-variant": "#665a43",
+                    "surface-variant": "#e3e3dc",
+                    "primary-dim": "#465843",
+                    "surface-container": "#efeee9",
+                    "secondary-fixed-dim": "#e3d2b5",
+                    "on-primary": "#eaffe4",
+                    "on-surface-variant": "#5e605b",
+                    "surface-tint": "#51644f",
+                    "on-tertiary": "#fff7f4",
+                    "on-background": "#31332f",
+                    "on-secondary": "#fff8f1",
+                    "on-secondary-fixed": "#493e29",
+                    "outline": "#7a7b76",
+                    "on-secondary-container": "#5c503a",
+                    "inverse-surface": "#0e0e0d",
+                    "on-surface": "#31332f",
+                    "surface-container-highest": "#e3e3dc",
+                    "surface-container-low": "#f5f4ef",
+                    "secondary-dim": "#5d523b",
+                    "error-container": "#fd795a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dadad4",
+                    "primary-container": "#d3e8ce",
+                    "on-tertiary-fixed-variant": "#6a3500",
+                    "on-error-container": "#6e1400",
+                    "tertiary-dim": "#804307",
+                    "secondary-fixed": "#f2e0c3",
+                    "on-primary-fixed": "#324431",
+                    "secondary": "#6a5e46",
+                    "error-dim": "#791903",
+                    "tertiary-fixed": "#ffab69",
+                    "tertiary-container": "#ffab69",
+                    "surface-bright": "#fbf9f5",
+                    "inverse-on-surface": "#9e9d99",
+                    "on-tertiary-container": "#5d2e00",
+                    "on-error": "#fff7f6",
+                    "background": "#fbf9f5",
+                    "on-primary-fixed-variant": "#4e604b",
+                    "outline-variant": "#b2b2ad",
+                    "inverse-primary": "#e7fde1",
+                    "error": "#a73b21",
+                    "surface-container-high": "#e9e8e3",
+                    "primary-fixed-dim": "#c5dac0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-40">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="text-sage-700 dark:text-sage-300 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors p-2 rounded-full active:scale-95 duration-150 ease-in-out">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-plus-jakarta text-2xl font-bold tracking-tight text-sage-800 dark:text-sage-200">Ma Liste <span class="text-sage-700/60 dark:text-sage-300/60 font-medium">(23)</span></h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-sage-700 dark:text-sage-300 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors p-2 rounded-full active:scale-95 duration-150 ease-in-out">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-3xl mx-auto space-y-8">
+<!-- Summary Banner: Editorial Asymmetry -->
+<section class="relative overflow-hidden bg-primary-container/40 rounded-lg p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="space-y-4 z-10">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-surface-container-lowest text-on-primary-container text-xs font-bold rounded-full tracking-wide border border-primary/5">Semaine du 7-13 avril</span>
+<span class="px-4 py-1.5 bg-surface-container-lowest text-on-primary-container text-xs font-bold rounded-full tracking-wide border border-primary/5">Famille (4 pers.)</span>
+</div>
+<p class="text-on-primary-container font-headline text-xl leading-snug">
+<span class="font-bold">3 recettes</span> · 5 essentiels<br/>
+<span class="text-primary font-extrabold text-3xl">23 articles au total</span>
+</p>
+</div>
+<div class="hidden sm:block absolute -right-4 -top-4 w-32 h-32 opacity-10">
+<span class="material-symbols-outlined text-[8rem]" data-icon="shopping_basket">shopping_basket</span>
+</div>
+</section>
+<!-- Main List Content -->
+<div class="space-y-10">
+<!-- Section: Viande & Poisson -->
+<section class="space-y-4">
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70" data-icon="restaurant">restaurant</span>
+<h2 class="font-headline text-lg font-bold tracking-tight text-on-surface">Viande &amp; Poisson</h2>
+<span class="text-on-surface-variant/50 font-label text-sm font-medium">2</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:translate-y-1 transition-transform" data-icon="expand_more">expand_more</span>
+</div>
+<div class="grid gap-3">
+<!-- Item -->
+<div class="flex items-center gap-4 p-5 bg-surface-container-lowest rounded-lg group hover:shadow-sm transition-all">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-full border-2 border-primary/20 text-primary focus:ring-primary/40 bg-transparent cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<h3 class="text-on-surface font-semibold text-base">Poulet entier</h3>
+<span class="text-on-surface-variant font-label text-sm">1.2 kg</span>
+</div>
+<span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-primary/60 mt-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="recipe">cooking</span>
+                                Poulet rôti
+                            </span>
+</div>
+</div>
+<!-- Item -->
+<div class="flex items-center gap-4 p-5 bg-surface-container-lowest rounded-lg group hover:shadow-sm transition-all">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-full border-2 border-primary/20 text-primary focus:ring-primary/40 bg-transparent cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<h3 class="text-on-surface font-semibold text-base">Lardons fumés</h3>
+<span class="text-on-surface-variant font-label text-sm">200g</span>
+</div>
+<span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-primary/60 mt-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="recipe">cooking</span>
+                                Quiche Lorraine
+                            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Fruits & Légumes -->
+<section class="space-y-4">
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70" data-icon="eco">eco</span>
+<h2 class="font-headline text-lg font-bold tracking-tight text-on-surface">Fruits &amp; Légumes</h2>
+<span class="text-on-surface-variant/50 font-label text-sm font-medium">5</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="expand_more">expand_more</span>
+</div>
+<div class="grid gap-3">
+<!-- Item Merged -->
+<div class="flex items-center gap-4 p-5 bg-surface-container-lowest rounded-lg border-l-4 border-primary/20 shadow-sm">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-full border-2 border-primary/20 text-primary focus:ring-primary/40 bg-transparent cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<h3 class="text-on-surface font-semibold text-base">Oignons</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="merge">merge</span>
+<span class="text-on-surface-variant font-label text-sm font-bold">4 unités</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-primary/80 mt-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="groups">groups</span>
+                                Multiple sources
+                            </span>
+</div>
+</div>
+<!-- Item -->
+<div class="flex items-center gap-4 p-5 bg-surface-container-low/50 rounded-lg opacity-60">
+<div class="relative flex items-center justify-center">
+<input checked="" class="w-6 h-6 rounded-full border-2 border-primary/20 text-primary focus:ring-primary/40 bg-primary/10 cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<h3 class="text-on-surface font-semibold text-base line-through">Carottes</h3>
+<span class="text-on-surface-variant font-label text-sm italic">500g</span>
+</div>
+</div>
+</div>
+<!-- Item -->
+<div class="flex items-center gap-4 p-5 bg-surface-container-lowest rounded-lg">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-full border-2 border-primary/20 text-primary focus:ring-primary/40 bg-transparent cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<h3 class="text-on-surface font-semibold text-base">Salade romaine</h3>
+<span class="text-on-surface-variant font-label text-sm">1</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Épicerie -->
+<section class="space-y-4">
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70" data-icon="shopping_bag">shopping_bag</span>
+<h2 class="font-headline text-lg font-bold tracking-tight text-on-surface">Épicerie</h2>
+<span class="text-on-surface-variant/50 font-label text-sm font-medium">3</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="expand_more">expand_more</span>
+</div>
+<div class="h-20 bg-surface-container-low rounded-xl border-2 border-dashed border-primary/5 flex items-center justify-center">
+<p class="text-on-surface-variant/40 text-xs font-medium uppercase tracking-widest">3 articles cachés</p>
+</div>
+</section>
+<!-- Section: DPH & Hygiène -->
+<section class="space-y-4">
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70" data-icon="home">home</span>
+<h2 class="font-headline text-lg font-bold tracking-tight text-on-surface">DPH &amp; Hygiène</h2>
+<span class="text-on-surface-variant/50 font-label text-sm font-medium">3</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+<!-- Section: Bébé -->
+<section class="space-y-4">
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70" data-icon="child_care">child_care</span>
+<h2 class="font-headline text-lg font-bold tracking-tight text-on-surface">Bébé</h2>
+<span class="text-on-surface-variant/50 font-label text-sm font-medium">2</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Actions Container -->
+<div class="fixed bottom-0 left-0 w-full z-40">
+<!-- Floating FAB/Action (Fixed Bottom Area) -->
+<div class="bg-white/80 dark:bg-stone-950/80 backdrop-blur-xl px-6 py-6 space-y-4 shadow-[0_-12px_32px_rgba(81,100,79,0.06)] rounded-t-xl">
+<button class="w-full bg-primary text-on-primary py-5 rounded-full flex items-center justify-center gap-3 font-headline font-bold text-lg shadow-lg hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+                Exporter vers Rappels (23)
+            </button>
+<div class="text-center">
+<button class="text-primary font-label text-sm font-bold uppercase tracking-widest hover:underline decoration-primary/30 underline-offset-4 transition-all">
+                    Partager en texte
+                </button>
+</div>
+</div>
+<!-- BottomNavBar Navigation Shell -->
+<nav class="bg-white/80 dark:bg-stone-950/80 backdrop-blur-xl flex justify-around items-center px-8 pb-6 pt-2">
+<a class="flex flex-col items-center justify-center bg-sage-100 dark:bg-sage-900/40 text-sage-900 dark:text-sage-50 rounded-full p-4 scale-110 transform transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="format_list_bulleted">format_list_bulleted</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-4 hover:text-sage-500 dark:hover:text-sage-300" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-4 hover:text-sage-500 dark:hover:text-sage-300" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-4 hover:text-sage-500 dark:hover:text-sage-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</a>
+</nav>
+</div>
+</body></html>
